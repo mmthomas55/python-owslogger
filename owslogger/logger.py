@@ -171,7 +171,8 @@ class DSNHandler(logging.Handler):
                 'meta': {
                     'file_name': record.filename,
                     'function_name': record.funcName,
-                    'line': record.lineno
+                    'line': record.lineno,
+                    'logger_name': record.name
                 }
             }
 
