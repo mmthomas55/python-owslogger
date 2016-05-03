@@ -1,12 +1,15 @@
 from setuptools import find_packages
 from setuptools import setup
 
+from owslogger import __version__
+
 
 setup(
     name='owslogger',
-    version='0.3.0',
+    version=__version__,
     url='https://github.com/theorchard/python-owslogger/',
     author='The Orchard',
+    author_email='webdev@theorchard.com',
     description=(
         'Logging library.'),
     packages=find_packages(),

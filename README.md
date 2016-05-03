@@ -2,10 +2,19 @@ Logging
 =======
 
 This logger is designed to send JSON to Loggly in a format that matches our
-OWS1 standard. Installation is minimal:
+OWS1 standard. This package is published to our internal Pypi server.
+Installation is minimal:
 
 ```bash
-pip install git+https://github.com/theorchard/python-owslogger.git@#egg=owslogger
+pip install -i https://pypi.theorchard.io/pypi/owslogger
+```
+
+Alternatively, put the following in your requirements file:
+
+```
+-i https://pypi.theorchard.io/pypi/
+
+owslogger
 ```
 
 Setting your flask python application:
@@ -43,3 +52,9 @@ current_app_logger = logger.setup(
     'loggly http/s url', 'environment', 'logger_name', logging.INFO,
     'service_name', '1.0.0', correlation_id='correlation_id')
 ```
+
+# Contributing
+Be sure to publish the latest version of this package to Pypi when contributing.
+This [Jenkins
+job](http://jenkins.theorchard.com:8080/view/pypi/job/publish-pypi-package/)
+will bump the version, tag and publish the package to Pypi.
