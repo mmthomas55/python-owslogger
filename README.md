@@ -6,7 +6,7 @@ OWS1 standard. This package is published to our internal Pypi server.
 Installation is minimal:
 
 ```bash
-pip install -i https://pypi.theorchard.io/pypi/owslogger
+pip install -i https://pypi.theorchard.io/pypi/ owslogger
 ```
 
 Alternatively, put the following in your requirements file:
